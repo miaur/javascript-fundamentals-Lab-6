@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="style.css"/>
+                <script src="lab6.js"></script>
+        </head>
+    <body>
+        <div class="header">
+                <h1>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h1>
+                <p class="class1">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+        
+    <div class="block">
+        <div class="firstColumn">
+            <div class="columnTitle">
+                ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:
+            </div>
+            <div class="columnContent">
+                <div class="satisfaction">
+                        <form>
+                                <input class="radioSatisf" name="satisf" type="radio" id="impr0" value="10"><label for="impr0">Ужасно</label><br>
+                                <input class="radioSatisf" name="satisf" type="radio" id="impr2" value="30"><label for="impr2">Так себе</label><br>
+                                <input class="radioSatisf" name="satisf" type="radio" id="impr3" value="50"><label for="impr3">Ни так, ни сяк</label><br>
+                                <input class="radioSatisf" name="satisf" type="radio" id="impr4" value="60"><label for="impr4">Неплохо</label><br>
+                                <input class="radioSatisf" name="satisf" type="radio" id="impr5" value="75"><label for="impr5">Хорошо</label><br>
+                                <input class="radioSatisf" name="satisf" type="radio" id="impr7" value="100"><label for="impr7">Просто супер!</label><br>
+                                <meter id="perSatisfaction" min="0" max="100" value="0"></meter><br>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="secondColumn">
+            <div class="columnTitle">
+                ПРЕДСТАВЬТЕСЬ:
+            </div>
+            <div class="columnContent">
+                <p><label>Имя*: </label><input type="text" required=true id="personName"></p>
+                <p><label></label>Фамилия*: </label><input type="text" required=true id="personFamily"></p>
+                <p><label></label>Отчество: </label><input type="text" id="personFatherName"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blockTitle">
+            КОНТАКТНАЯ ИНФОРМАЦИЯ:
+    </div>
+    <div class="block">
+            
+            <div class="firstColumn">
+                <p><label>Телефон*: </label><input type="tel"></p>
+            </div>
+            <div class="secondColumn">
+                    <p><label>Электронная почта*: </label><input type="email"></p>
+            </div>
+    </div>
+    <div class="blockTitle">
+            Детали поездки:
+    </div>
+    <div class="block">
+            <div class="firstColumn">
+                <p>Даты поездки:</p><br>
+                <input type="date"> <span> - </span> <input type="date">
+            </div>
+            <div class="secondColumn" >
+                    <select name="countries" id="countriesListSelection">
+                            <option value="0">Выберете страну</option>
+                    </select>
+            </div>
+            <div class="thirdColumn">
+                <form id="showplacesList">
+                        <!-- <input type="checkbox" id="showplace0"> <label for="showplace0">Гора лысая</label> -->
+                </form>
+            </div>
+    </div>
+    <div class="blockTitle">
+            Оцените качество услуг гида:
+    </div>
+    <div class="block">
+        <div class="firstColumn">
+            <label>На родном языке:</label><br><br>
+                <label class="switch">
+                        <input type="checkbox" checked class="s1">
+                        <span class="slider round"></span>
+                </label>
+                <input type="range" min="1" max="100" oninput="fff()" value="50"><br><br>
+                <label>На языке посещенной страны:</label><br><br>
+                <label class="switch">
+                    <input type="checkbox" class="s1">
+                    <span class="slider round"></span>
+                </label>
+                <input type="range" min="1" max="100" oninput="fff()" value="50" hidden>
+                <label>Не пользовались</label>
+        </div>
+    </div>
+
+    <div class="blockTitle">
+            Галерея:
+    </div>
+    <div class="block">
+        <p><button>Загрузить файл</button></p><br>
+        <div><img src="images/upload.png" class="uploadImg"></div>
+    </div>
+
+    <div class="blockTitle">
+            Опишите свои эмоции::
+    </div>
+    <div class="block">
+        <textarea class="emotions"></textarea>
+    </div>
+
+    <div class="block">
+        <input type="submit" class="sendDataBtn" id="sendDataBtn">
+    </div>
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,18 @@
+[
+    {"name": "Afghanistan", "code": "AF", "showplaces":["Band-e-Amir National Park", "Blue Mosque", "Babur Tomb"]},
+    {"name": "Albania", "code": "AL", "showplaces":["Saranda", "Tirana"]},
+    {"name": "American Samoa", "code": "AS", "showplaces":["Ofu Beach", "National Park"]},
+    {"name": "Andorra", "code": "AD", "showplaces":["Andorra la Vella", "Vallnord", "Sant Joan de Caselles Church"]},
+    {"name": "Austria", "code": "AT", "showplaces":["Tyrol"]},
+    {"name": "Bahamas", "code": "BS", "showplaces":["Atlantis Paradise Island", "Nassau", "Sea Park", "Harbour Island"]},
+    {"name": "Belarus", "code": "BY", "showplaces":["Гора лысая", "Национальная библиотека", "Гродненский зоопарк"]},
+    {"name": "Belgium", "code": "BE", "showplaces":["1", "2", "3"]},
+    {"name": "Brazil", "code": "BR", "showplaces":["1", "2", "3"]},
+    {"name": "British Indian Ocean Territory", "code": "IO", "showplaces":["1", "2", "3"]},
+    {"name": "Cuba", "code": "CU", "showplaces":["1", "2", "3"]},
+    {"name": "Cyprus", "code": "CY", "showplaces":["1", "2", "3"]},
+    {"name": "Czech Republic", "code": "CZ", "showplaces":["1", "2", "3"]},
+    {"name": "Denmark", "code": "DK", "showplaces":["1", "2", "3"]},
+    {"name": "Dominica", "code": "DM", "showplaces":["1", "2", "3"]},
+    {"name": "Egypt", "code": "EG", "showplaces":["1", "2", "3"]}
+    ]
