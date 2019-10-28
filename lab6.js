@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
     var radios = document.getElementsByClassName('radioSatisf');
     for (let i = 0; i < radios.length; i++) {
         radios[i].onclick = setSatisfactionPersent;
@@ -8,6 +8,8 @@ window.onload = function () {
     setCountries();
 
     document.getElementById("countriesListSelection").onchange = setShowPlaces;
+
+    document.getElementById("ownLang").onchange = document.getElementById("countryLang").onchange = langQuality;
 }
 
 function setSatisfactionPersent() {
@@ -36,19 +38,18 @@ function getElementById(id) {
 function validate(data) {
     if (data.name == "" || data.family == '') {
         return false;
-    }
-    else return true;
+    } else return true;
 }
 
 function send(data) {
     alert(data.name + ", " + data.family + ", " + data.fatherName);
 }
 
-var getJSON = function (url, callback) {
+var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url);
     xhr.responseType = 'json';
-    xhr.onload = function () {
+    xhr.onload = function() {
         var status = xhr.status;
         if (status === 200) {
             callback(null, xhr.response);
@@ -123,3 +124,12 @@ function setShowPlaces() {
 
 }
 
+function langQuality() {
+    if (this.checked) {
+        this.parentNode.parentNode.getElementsByClassName("langLabel")[0].hidden = true;
+        this.parentNode.parentNode.getElementsByClassName("langRange")[0].hidden = false;
+    } else {
+        this.parentNode.parentNode.getElementsByClassName("langLabel")[0].hidden = false;
+        this.parentNode.parentNode.getElementsByClassName("langRange")[0].hidden = true;
+    }
+}
