@@ -3,7 +3,10 @@ window.onload = function() {
     for (let i = 0; i < radios.length; i++) {
         radios[i].onclick = setSatisfactionPersent;
     }
+
+    // ******** Send data
     document.getElementById("sendDataBtn").onclick = this.sendData;
+    // ******** end Send data
 
     setCountries();
 
@@ -21,13 +24,15 @@ function sendData() {
         satisf: getElementById("perSatisfaction").value,
         name: getElementById("personName").value,
         family: getElementById("personFamily").value,
-        fatherName: getElementById("personFatherName").value
+        fatherName: getElementById("personFatherName").value,
+        tel: getElementById("personTel").value,
+        email: getElementById("personEmail").value
     }
 
     if (validate(data)) {
         send(data);
     } else {
-        alert("При введении данных в одно из полей была допущена ошибка.");
+        showModalElert('error');
     }
 }
 
@@ -36,13 +41,14 @@ function getElementById(id) {
 }
 
 function validate(data) {
-    if (data.name == "" || data.family == '') {
+    if (data.name == "" || data.family == '' || data.tel == '' || data.email == '') {
         return false;
     } else return true;
 }
 
 function send(data) {
-    alert(data.name + ", " + data.family + ", " + data.fatherName);
+    showModalElert('confirm', data);
+    //send data somewhere
 }
 
 var getJSON = function(url, callback) {
