@@ -13,6 +13,8 @@ window.onload = function() {
     document.getElementById("countriesListSelection").onchange = setShowPlaces;
 
     document.getElementById("ownLang").onchange = document.getElementById("countryLang").onchange = langQuality;
+    this.getElementById("dateFrom").onchange = dateFromChanged;
+    this.getElementById("dateTo").onchange = dateToChanged;
 }
 
 function setSatisfactionPersent() {
@@ -26,7 +28,11 @@ function sendData() {
         family: getElementById("personFamily").value,
         fatherName: getElementById("personFatherName").value,
         tel: getElementById("personTel").value,
-        email: getElementById("personEmail").value
+        email: getElementById("personEmail").value,
+        dateFrom: getElementById('dateFrom').value,
+        dateTo: getElementById('dateTo').value,
+        country: (getElementById('countriesListSelection').selectedIndex == 0) ? ("Не выбрана") : (getElementById('countriesListSelection').options[getElementById('countriesListSelection').selectedIndex].value),
+        emotions: getElementById('emotions').value
     }
 
     if (validate(data)) {
@@ -41,9 +47,47 @@ function getElementById(id) {
 }
 
 function validate(data) {
-    if (data.name == "" || data.family == '' || data.tel == '' || data.email == '') {
-        return false;
-    } else return true;
+    let res = true;
+    let color = getElementById('personName').style.borderColor;
+    if (!data.name) {
+        getElementById('personName').style.borderColor = '#FF0000';
+        res = false;
+    } else getElementById('personName').style.borderColor = '';
+    if (!data.family) {
+        getElementById('personFamily').style.borderColor = '#FF0000';
+        res = false;
+    } else getElementById('personFamily').style.borderColor = '';
+    if (!validateTel(data.tel)) {
+        getElementById("personTel").style.borderColor = '#FF0000';
+        res = false;
+    } else getElementById('personTel').style.borderColor = '';
+    if (!validateEmail(data.email)) {
+        getElementById("personEmail").style.borderColor = '#FF0000';
+        res = false;
+    } else getElementById('personEmail').style.borderColor = '';
+    if (!validateDates(data.dateFrom, data.dateTo)) {
+        getElementById("dateFrom").style.borderColor = '#FF0000';
+        getElementById("dateTo").style.borderColor = '#FF0000';
+        res = false;
+    } else {
+        getElementById("dateFrom").style.borderColor = '';
+        getElementById("dateTo").style.borderColor = '';
+    }
+    return res;
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function validateTel(tel) {
+    return (tel.match(/\d/g) || []).length == 5;
+}
+
+function validateDates(dateFrom, dateTo) {
+    if (!dateTo || !dateFrom || dateTo < dateFrom) return false;
+    return true;
 }
 
 function send(data) {
@@ -137,5 +181,19 @@ function langQuality() {
     } else {
         this.parentNode.parentNode.getElementsByClassName("langLabel")[0].hidden = false;
         this.parentNode.parentNode.getElementsByClassName("langRange")[0].hidden = true;
+    }
+}
+
+function dateFromChanged() {
+    let dateTo = getElementById("dateTo").value;
+    if (!dateTo || dateTo < this.value) {
+        getElementById("dateTo").value = this.value;
+    }
+}
+
+function dateToChanged() {
+    let dateFrom = getElementById("dateFrom").value;
+    if (!dateFrom || dateTo < this.value) {
+        getElementById("dateFrom").value = this.value;
     }
 }

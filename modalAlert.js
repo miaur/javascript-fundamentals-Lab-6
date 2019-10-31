@@ -18,12 +18,14 @@ function showModalElert(type, data) {
         // modal.getElementsByClassName('modal-title').innerHTML = "ДОПУЩЕНА ОШИБКА";
         modal.childNodes[3].childNodes[1].innerHTML = "ДОПУЩЕНА ОШИБКА";
         modal.childNodes[3].childNodes[3].innerHTML = "При введении данных в одно из полей была допущена ошибка.";
+        modal.childNodes[3].childNodes[5].hidden = true;
         button.value = "OK";
     } else if (type == 'confirm') {
         modal.childNodes[3].childNodes[1].innerHTML = "Спасибо, " + data.family + ' ' + data.name + (data.fatherName ? ' ' + data.fatherName : "") + ", ваш отзыв отправлен!";
         // document.getElementsByClassName("modal-subtitle").innerHTML = "СУММАРНАЯ ИНФОРМАЦИЯ";
         modal.childNodes[3].childNodes[3].innerHTML = "СУММАРНАЯ ИНФОРМАЦИЯ";
         // document.getElementsByClassName("modal-text").innerHTML = "Информация из data..."
+        modal.childNodes[3].childNodes[5].hidden = false;
         modal.childNodes[3].childNodes[5].innerHTML = "Информация из data..."
         button.value = "Закрыть окно";
     }

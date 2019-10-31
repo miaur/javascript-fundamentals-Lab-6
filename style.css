@@ -5,75 +5,61 @@
 }
 
 h1 {
-width: 507px;
-height: 63px;
-
-margin-left: auto;
+    width: 507px;
+    height: 63px;
+    margin-left: auto;
     margin-right: auto;
-
-font-family: PT Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 62px;
-/* identical to box height */
-
-color: #000000;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 62px;
+    /* identical to box height */
+    color: #000000;
 }
 
 .class1 {
     /* Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях */
-
-width: 847px;
-height: 72px;
-
-margin-left: auto;
-margin-right: auto;
-
-font-family: PT Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 31px;
-display: flex;
-align-items: center;
-text-align: center;
-text-transform: uppercase;
-
-color: #B3B3B3;
-
-
+    width: 847px;
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #B3B3B3;
 }
 
 .columnTitle {
     /* ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ: */
-
-width: 363px;
-height: 38px;
-
-font-family: PT Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 36px;
-display: flex;
-align-items: center;
-text-align: center;
-text-transform: uppercase;
-
-color: #000000;
-
-
+    width: 363px;
+    height: 38px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
 }
 
 .block {
-        width: 1024px;
-        margin-left: auto;
-        margin-right: auto;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .firstColumn {
@@ -90,30 +76,26 @@ color: #000000;
 
 .blockTitle {
     /* КОНТАКТНАЯ ИНФОРМАЦИЯ: */
-width: 371px;
-height: 38px;
-
-margin-left: auto;
-margin-right: auto;
-
-font-family: PT Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 36px;
-display: flex;
-align-items: center;
-text-align: center;
-text-transform: uppercase;
-
-color: #000000;
-
-
+    width: 371px;
+    height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
 }
 
 .satisfaction {
     display: flex;
 }
+
 
 /**** ==== Slider ==== ****/
 
@@ -122,15 +104,15 @@ color: #000000;
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  .switch input { 
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -140,9 +122,9 @@ color: #000000;
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -152,52 +134,53 @@ color: #000000;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .s1:checked + .slider {
+}
+
+.s1:checked+.slider {
     background-color: #2196F3;
-  }
-  
-  .s1:focus + .slider {
+}
+
+.s1:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
-  }
-  
-  .s1:checked + .slider:before {
+}
+
+.s1:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
 
-  .emotions {
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.emotions {
     width: 500px;
     height: 250px;
-    
     background: #E0E0E0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+}
 
 .uploadImg {
-
-width: 150px;
-height: 150px;
+    width: 150px;
+    height: 150px;
 }
 
 .sendDataBtn {
-width: 250px;
-height: 50px;
+    width: 250px;
+    height: 50px;
+    margin: 15px;
+    background: #81B3D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-margin: 15px;
-
-background: #81B3D2;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+.privateInfo {
+    padding-bottom: 15px;
 }
